@@ -138,32 +138,7 @@ const Contact = () => {
               </MapContainer>
             </div>
             <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-              {locations.map((location, index) => (
-                <div
-                  key={index}
-                  className={`p-4 rounded-lg cursor-pointer transition-all duration-300 ${
-                    activeLocation === index
-                      ? 'bg-blue-50 border-blue-200 border'
-                      : 'hover:bg-gray-50'
-                  }`}
-                  onClick={() => setActiveLocation(index)}
-                >
-                  <div className="flex items-start">
-                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center mr-3 ${
-                      activeLocation === index ? 'bg-blue-100 text-blue-600' : 'bg-gray-100 text-gray-600'
-                    }`}>
-                      <MapPin className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-gray-900">
-                        {location.city}, {location.country}
-                      </h4>
-                      <p className="text-sm text-gray-500 mt-1">{location.address}</p>
-                      <p className="text-sm text-gray-500 mt-1">{location.phone}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
+             
             </div>
           </div>
         </div>
@@ -200,17 +175,6 @@ const Contact = () => {
                 </div>
               </div>
               
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Organization
-                </label>
-                <input
-                  type="text"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  value={formData.organization}
-                  onChange={(e) => setFormData({...formData, organization: e.target.value})}
-                />
-              </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -257,10 +221,7 @@ const Contact = () => {
                   <Mail className="w-5 h-5 mr-3" />
                   <span>support@PatientCare.com</span>
                 </div>
-                <div className="flex items-center">
-                  <Phone className="w-5 h-5 mr-3" />
-                  <span>+1 (800) 123-4567</span>
-                </div>
+               
               </div>
             </div>
 

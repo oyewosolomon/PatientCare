@@ -25,12 +25,6 @@ const Footer = () => {
       { label: 'Blog', href: '#' }, 
       { label: 'Community', href: '#' },
       { label: 'Case Studies', href: '#' }
-    ],
-    legal: [
-      { label: 'Privacy Policy', href: '#' },
-      { label: 'Terms of Service', href: '#' },
-      { label: 'Cookie Policy', href: '#' },
-      { label: 'Licenses', href: '#' }
     ]
   };
 
@@ -70,7 +64,9 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           {/* Brand Section */}
           <div className="col-span-2">
-            <div className="text-2xl font-bold text-white mb-4">PatientCare AI</div>
+            <div className="text-2xl font-bold text-white mb-4">
+            <img src="/favicon.svg" className='h-10 w-10' alt="PatientCare" />
+              PatientCare AI</div>
             <p className="text-gray-400 mb-6 max-w-md">
               Empowering 200+ hospitals with intelligent patient care management, reducing wait times, and improving diagnosis accuracy through advanced AI.
             </p>
